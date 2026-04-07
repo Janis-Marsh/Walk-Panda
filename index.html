@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking Panda</title>
+    <style>
+        /* CSS Styles ... */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .road {
+            border-bottom:  7px dashed black;
+        }
+
+        .walkPanda {
+            background: url(panda_colour.png);
+            width: 250px;
+            height: 330px;
+
+            animation-name: panda, walk;
+            animation-duration: 1s, 5s;
+            animation-timing-function: steps(12), linear;
+            animation-iteration-count: infinite, infinite;
+        }
+
+        @keyframes panda {
+            0% {
+                background-position: 0px;
+            }
+
+            100% {
+                background-position: 3000px;
+            }
+        }
+
+        @keyframes walk {
+            0% {
+                transform: translateX(-100px);
+            }
+
+            100% {
+                transform: translateX(1200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="walkPanda"></div>
+    <div class="road"></div>
+</body>
+</html>
